@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 12 Task 3</title>
+    <style>
+        #toggleDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px auto;
+            display: block; /* Default state is visible */
+        }
+    </style>
+</head>
+<body>
+    <h1>Toggle Visibility Example</h1>
+    <button id="toggleButton">Hide</button>
+    <div id="toggleDiv">This is a toggleable div</div>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            const div = document.getElementById('toggleDiv');
+            const button = document.getElementById('toggleButton');
+
+            if (div.style.display === 'none') {
+                div.style.display = 'block';
+                button.textContent = 'Hide';
+            } else {
+                div.style.display = 'none';
+                button.textContent = 'Show';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 12 Task 4</title>
+    <style>
+        #hoverDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px auto;
+            font-size: 16px;
+            transition: all 0.3s ease; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover Effect Example</h1>
+    <div id="hoverDiv">Hover over me!</div>
+
+    <script>
+        const div = document.getElementById('hoverDiv');
+
+        div.addEventListener('mouseover', function() {
+            div.style.backgroundColor = 'lightblue';
+            div.style.fontSize = '20px';
+        });
+
+        div.addEventListener('mouseout', function() {
+            div.style.backgroundColor = 'lightgray';
+            div.style.fontSize = '16px';
+        });
+    </script>
+</body>
+</html>

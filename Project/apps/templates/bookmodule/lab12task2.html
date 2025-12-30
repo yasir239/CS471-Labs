@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 12 Task 2</title>
+</head>
+<body>
+    <h1>Unordered List Example</h1>
+    <input type="text" id="itemInput" placeholder="Enter item text" />
+    <button id="addItemButton">Add Item</button>
+    <ul id="itemList">
+
+    </ul>
+
+    <script>
+        document.getElementById('addItemButton').addEventListener('click', function() {
+            const userInput = document.getElementById('itemInput').value;
+
+            if (userInput.trim() === "") {
+                alert("Please enter an item text.");
+                return;
+            }
+
+            const newItem = document.createElement('li');
+            newItem.textContent = userInput;
+            document.getElementById('itemList').appendChild(newItem);
+
+            document.getElementById('itemInput').value = "";
+        });
+    </script>
+</body>
+</html>
